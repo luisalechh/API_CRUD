@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS # importa la extension cors
 
 app = Flask(__name__)
+CORS(app)  # Aplica CORS a todas las rutas de la aplicación
 stored_data = []  # Lista para almacenar los datos
 
 # Ruta para el método GET
